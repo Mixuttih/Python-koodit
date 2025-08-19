@@ -1,5 +1,3 @@
 #kommenttiosio
 
-kayttaja = input("Anna nimesi: ")
-print("Terve, " + kayttaja + "!")
-
+print("Hei, Mika Hielkema Suutari!")
