@@ -1,2 +1,4 @@
 # Python-koodit
-Omat Python-ohjelmakoodit
+Mika Hielkema Suutari
+TXK25S1-B
+Python-ohjelmakoodit tehtäväpalautukset
