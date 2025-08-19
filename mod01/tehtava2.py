@@ -1,6 +1,4 @@
 #1
-from ipaddress import summarize_address_range
-
 kayttaja = input("Anna nimesi: ")
 print("Terve, " + kayttaja + "!")
 
@@ -33,3 +31,18 @@ print("Lukujen " + luku1 + ", " + luku2 + " ja " + luku3 + " tulo on " + str(tul
 print("Lukujen " + luku1 + ", " + luku2 + " ja " + luku3 + " keskiarvo on " + str(keskiarvo))
 
 #5
+leiviskat = input("Syötä paino leivisköinä: ")
+naulat = input("Syötä paino nauloina: ")
+luodit = input("Syötä paino luodeissa: ")
+
+leiviskat_nauloiksi = float(leiviskat) * 20
+naulat = float(naulat) + float(leiviskat_nauloiksi)
+naulat_luodeiksi = float(naulat) * 32
+luodit = float(luodit) + float(naulat_luodeiksi)
+luodit_grammoiksi = float(luodit) * 13.3
+
+grammat_kiloiksi = int(luodit_grammoiksi / 1000)
+grammat_jaljella = float((luodit_grammoiksi / 1000) - grammat_kiloiksi) * 1000
+
+print("Massa nykymittojen mukaan: " + str(grammat_kiloiksi) + "kilogrammaa ja " + str(int(grammat_jaljella)) + "grammaa.")
+
