@@ -44,5 +44,5 @@ luodit_grammoiksi = float(luodit) * 13.3
 grammat_kiloiksi = int(luodit_grammoiksi / 1000)
 grammat_jaljella = float((luodit_grammoiksi / 1000) - grammat_kiloiksi) * 1000
 
-print("Massa nykymittojen mukaan: " + str(grammat_kiloiksi) + "kilogrammaa ja " + str(int(grammat_jaljella)) + "grammaa.")
+print("Massa nykymittojen mukaan: " + str(grammat_kiloiksi) + " kilogrammaa ja " + str(int(grammat_jaljella)) + " grammaa.")
 
