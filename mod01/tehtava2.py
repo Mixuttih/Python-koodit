@@ -46,3 +46,13 @@ grammat_jaljella = float((luodit_grammoiksi / 1000) - grammat_kiloiksi) * 1000
 
 print("Massa nykymittojen mukaan: " + str(grammat_kiloiksi) + " kilogrammaa ja " + str(int(grammat_jaljella)) + " grammaa.")
 
+#6
+import random
+
+print("Tämä ohjelma printtaa kaksi satunnaista numerosarjaa")
+
+numero1 = random.randint(0, 9), random.randint(0, 9), random.randint(0, 9)
+print("Ensimmäinen kolminumeroinen satunnainen numerosarja: " + str(numero1))
+
+numero2 = random.randint(1, 6), random.randint(1, 6), random.randint(1, 6), random.randint(1, 6)
+print("Toinen nelinumeroinen satunnainen numerosarja: " + str(numero2))
