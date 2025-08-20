@@ -3,8 +3,8 @@ kayttaja = input("Anna nimesi: ")
 print("Terve, " + kayttaja + "!")
 
 #2
-
 import math
+
 ympyra = input("Määritä ympyrän säde cm: ")
 sade = float(ympyra) * float(ympyra) * math.pi
 print("Ympyrän pinta-ala on " + str(sade) + " cm2.")
