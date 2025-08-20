@@ -9,7 +9,7 @@ else:
     print("Kuha on täysikasvuinen!")
 
 #2
-hyttivalinta = input("Syötä valitsemasi hyttiluokka (LUX, A, B tai C): ")
+hyttivalinta = input("Syötä valitsemasi hyttiluokka (LUX, A, B tai C): ").upper()
 
 if hyttivalinta == "LUX":
     print("LUX on parvekkeellinen hytti yläkannella.")
@@ -23,8 +23,8 @@ else:
     print("Virheellinen hyttiluokka")
 
 #3
-sukupuoli = input("Syötä biologinen sukupuolesi (M tai N): ")
-hemoglobiiniarvo = float(input("Syötä hemoglobiiniarvosi (muodossa g/l): "))
+sukupuoli = input("Syötä biologinen sukupuolesi (M tai N): ").upper()
+hemoglobiiniarvo = float(input("Syötä hemoglobiiniarvosi (g/l): "))
 
 if sukupuoli == "M":
     if hemoglobiiniarvo < 134:
