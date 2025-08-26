@@ -111,3 +111,24 @@ print(f"Ympyrän ulkopuolella on {ympyran_ulkopuolella} pistettä")
 
 pii_likiarvo = (ympyran_sisalla / syotteen_maara) * 4
 print(f"Pii:n likiarvo on {pii_likiarvo}")
+
+#6 uudelleen ilman listaa ja for -looppia
+syotteen_maara2 = int(input("Syötä pisteiden määrä: "))
+pisteiden_maara2 = syotteen_maara2
+ympyran_sisalla2 = 0
+ympyran_ulkopuolella2 = 0
+
+while pisteiden_maara2 > 0:
+    x = random.uniform(-1, 1)
+    y = random.uniform(-1, 1)
+    pisteiden_maara2 = pisteiden_maara2 - 1
+
+    if x**2 + y**2 < 1:
+        ympyran_sisalla2 = ympyran_sisalla2 + 1
+    else:
+        ympyran_ulkopuolella2 = ympyran_ulkopuolella2 + 1
+
+print(f"Ympyrän sisällä on {ympyran_sisalla2} pistettä")
+print(f"Ympyrän ulkopuolella on {ympyran_ulkopuolella2} pistettä")
+pii_likiarvo2 = (ympyran_sisalla2 / syotteen_maara2) * 4
+print(f"Pii:n likiarvo on {pii_likiarvo2}")
