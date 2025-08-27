@@ -80,19 +80,21 @@ print(f"Lukulista ilman parittomia lukuja on {karsittava_lista}")
 #6
 import math
 
+def pizzalaskuri(halk, hint):
+    pizza_sade = halk / 2
+    pizza_pinta_ala = math.pi * pizza_sade**2
+    pizza_arvo = pizza_pinta_ala / hint
+    return pizza_arvo
+
 pizza1_halkaisija = input("Kuinka suuri ensimmäisen pizzan halkaisija on senttimetreissä: ")
 pizza1_hinta = input("Kuinka kallis ensimmäinen pizza on: ")
+
+pizza1_arvo = pizzalaskuri(int(pizza1_halkaisija), int(pizza1_hinta))
+
 pizza2_halkaisija = input("Kuinka suuri toisen pizzan halkaisija on senttimetreissä: ")
 pizza2_hinta = input("Kuinka kallis toinen pizza on: ")
 
-def pizzalaskuri(halk1, halk2, hint1, hint2):
-    pizza1_sade = halk1 / 2
-    pizza2_sade = halk2 / 2
-    pizza1_pinta_ala = math.pi * pizza1_sade**2
-    pizza2_pinta_ala = math.pi * pizza2_sade**2
-    pizza1_arvo = pizza1_pinta_ala / hint1
-    pizza2_arvo = pizza2_pinta_ala / hint2
-    print(f"Ensimmäisessä pizzassa maksat {pizza1_arvo:.2f} euroa per neliömetri")
-    print(f"Toisessa pizzassa maksat {pizza2_arvo:.2f} euroa per neliömetri")
+pizza2_arvo = pizzalaskuri(int(pizza2_halkaisija), int(pizza2_hinta))
 
-pizzalaskuri(int(pizza1_halkaisija), int(pizza2_halkaisija), int(pizza1_hinta), int(pizza2_hinta))
+print(f"Ensimmäisessä pizzassa maksat {pizza1_arvo:.2f} euroa per neliömetri")
+print(f"Toisessa pizzassa maksat {pizza2_arvo:.2f} euroa per neliömetri")
