@@ -83,7 +83,7 @@ import math
 def pizzalaskuri(halk, hint):
     pizza_sade = halk / 2
     pizza_pinta_ala = math.pi * pizza_sade**2
-    pizza_arvo = pizza_pinta_ala / hint
+    pizza_arvo = hint / pizza_pinta_ala
     return pizza_arvo
 
 pizza1_halkaisija = input("Kuinka suuri ensimmäisen pizzan halkaisija on senttimetreissä: ")
@@ -98,3 +98,9 @@ pizza2_arvo = pizzalaskuri(int(pizza2_halkaisija), int(pizza2_hinta))
 
 print(f"Ensimmäisessä pizzassa maksat {pizza1_arvo:.2f} euroa per neliömetri")
 print(f"Toisessa pizzassa maksat {pizza2_arvo:.2f} euroa per neliömetri")
+if pizza1_arvo > pizza2_arvo:
+    print(f"Pizza 2 on {pizza1_arvo - pizza2_arvo:.2f} euroa halvempi kuin Pizza 1")
+elif pizza2_arvo > pizza1_arvo:
+    print(f"Pizza 1 on {pizza2_arvo - pizza1_arvo:.2f} euroa halvempi kuin Pizza 2")
+else:
+    print("Pizzat ovat saman arvoisia, kaikki ovat tyytyväisiä")
