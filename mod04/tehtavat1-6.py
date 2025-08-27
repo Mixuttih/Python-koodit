@@ -88,7 +88,7 @@ while yritykset > 0:
         salasana = input("Salasana: ")
 
 
-#6
+#6 käyttäen listaa ja for -looppia
 syotteen_maara = int(input("Syötä pisteiden määrä: "))
 pisteiden_maara = syotteen_maara
 piste_lista = {}
