@@ -1,6 +1,7 @@
 #1 Tietokantahaku
 import mysql.connector
 
+#Yhteysmuuttuja
 yhteys = mysql.connector.connect(
          host='127.0.0.1',
          port= 3307,
@@ -10,6 +11,7 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 
+#Hakufunktio
 def tietokantahaku(i):
     sql = f"SELECT name, municipality FROM airport WHERE ident='{i}'"
     kursori = yhteys.cursor()
@@ -20,5 +22,6 @@ def tietokantahaku(i):
             print(f"{rivi[0]} on lentokenttä joka sijaitsee kaupungissa {rivi[1]}.")
     return
 
+#Käyttäjäsyöte
 koodi = input("Syötä ICAO -koodi: ")
 tietokantahaku(koodi)
