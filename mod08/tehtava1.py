@@ -11,7 +11,7 @@ yhteys = mysql.connector.connect(
          )
 
 def tietokantahaku(i):
-    sql = f"SELECT name, municipality FROM airport where ident='{i}'"
+    sql = f"SELECT name, municipality FROM airport WHERE ident='{i}'"
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()

@@ -13,7 +13,7 @@ yhteys = mysql.connector.connect(
 
 
 def tietokantahaku(i):
-    sql = f"SELECT type FROM airport where iso_country='{i}'"
+    sql = f"SELECT type FROM airport WHERE iso_country='{i}'"
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
