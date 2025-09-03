@@ -13,6 +13,7 @@ yhteys = mysql.connector.connect(
 
 #Hakufunktio
 def tietokantahaku(i):
+    #Haetaan tyyppien laskettu määrä sekä nimet, erotellaan lasketut tyypit nimen perusteella
     sql = f"SELECT COUNT(type), type FROM airport WHERE iso_country='{i}' GROUP BY type ORDER BY COUNT(type) DESC"
     kursori = yhteys.cursor()
     kursori.execute(sql)
@@ -21,6 +22,7 @@ def tietokantahaku(i):
     if kursori.rowcount > 0:
         print(f"{i} airports are: ")
         for rivi in tulos:
+            #Tulostetaan lentokenttien määrä sekä tyyppi
             print(rivi[0], rivi[1])
     return
 
