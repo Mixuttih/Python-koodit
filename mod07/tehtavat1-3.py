@@ -4,7 +4,7 @@ kuukausi = input("Anna kuukauden järjestysnumero (1-12): ")
 vuodenaika = vuodenajat[int(kuukausi)-1]
 print (f"{kuukausi}. kuukausi on {vuodenaika}.")
 
-#2: nimilista johon lisätään nimiä ja tulostetaan lopuksi
+#2: nimilista johon lisätään nimiä ja tulostetaan lopuksi satunnaisesti
 nimilista = {""} #Set ilman arvoja on dictionary
 nimilista.remove("") #Poistetaan ylimääräinen arvo
 
@@ -19,8 +19,12 @@ while nimi != "":
         nimilista.add(nimi)
         nimi = input("Syötä nimi: ")
 
-for i in nimilista:
-    print(i)
+#Ohjelma tulostaa nimilistan mielivaltaisesti
+import random
+for i in range(len(nimilista)):
+    randomNimi = random.choice(tuple(nimilista)) #random.choice ei toimi seteissä, muutetaan monikoksi
+    print(randomNimi)
+    nimilista.remove(randomNimi)
 
 #3: lentokenttien haku- ja syöttöjärjestelmä
 lentokentat = {
