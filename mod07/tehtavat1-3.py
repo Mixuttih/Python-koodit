@@ -29,6 +29,7 @@ lentokentat = {
     "EFHV":"Hyvinkää Airport",
     "EFOU":"Oulu Airport"
 }
+
 print("Kirjoita [SYÖTÄ] jos haluat syöttää uuden lentokentän tiedot.")
 print("Kirjoita [HAE] jos haluat hakea lentokentän tietoja.")
 print("Kirjoita [LOPETA] jos haluat lopettaa")
@@ -36,13 +37,15 @@ tilanne = input("[SYÖTÄ][HAE][LOPETA]: ")
 
 #Prosessi joka pyörii kunnes käyttäjä antaa komennon "lopeta"
 while tilanne.upper() != "LOPETA":
-    #Prosessissa on 2 tilaa, syöttö ja haku
+    #Prosessissa on 2 aktiivista tilaa, syöttö ja haku
+    #Syöttötila
     if tilanne.upper() == "SYÖTÄ":
         kentan_nimi = input("Syötä uuden lentokentän nimi: ")
         kentan_koodi = input("Syötä uuden lentokentän ICAO -koodi: ").upper()
         lentokentat[kentan_koodi] = kentan_nimi
         #Käyttäjä voi vaihtaa prosessin tilaa
         tilanne = input("[SYÖTÄ][HAE][LOPETA]: ")
+    #Hakutila
     if tilanne.upper() == "HAE":
         kentan_koodi = input("Syötä haettavan lentokentän ICAO -koodi: ").upper()
         #Etsitään syötettyä koodia
@@ -52,9 +55,11 @@ while tilanne.upper() != "LOPETA":
         else:
             print("Haettua lentokenttää ei löydy")
             tilanne = input("[SYÖTÄ][HAE][LOPETA]: ")
+
     #Jos käyttäjä ei syötä oikeaa toimintoa
     else:
         print("Virhe! Syötettyä toimintoa ei ole.")
         tilanne = input("[SYÖTÄ][HAE][LOPETA]: ")
+
 #Prosessi lopetettu
 print("Ohjelma lopetettu.")
