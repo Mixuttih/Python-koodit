@@ -5,8 +5,7 @@ vuodenaika = vuodenajat[int(kuukausi)-1]
 print (f"{kuukausi}. kuukausi on {vuodenaika}.")
 
 #2: nimilista johon lisätään nimiä ja tulostetaan lopuksi satunnaisesti
-nimilista = {""} #Set ilman arvoja on dictionary
-nimilista.remove("") #Poistetaan ylimääräinen arvo
+nimilista = set()
 
 nimi = input("Syötä nimi: ")
 
