@@ -28,15 +28,15 @@ class Auto:
                 #Vähennetään muutos nopeudesta
                 self.nopeus + nopeudenmuutos
 
+    def kulje(self, tuntimaara):
+        self.kuljettumatka += self.nopeus * tuntimaara
+
 #Alustetaan auto
 auto1 = Auto("ABC-123", 142)
 
-#Kiihdytetään askelittain
-auto1.kiihdyta(30)
-auto1.kiihdyta(70)
-auto1.kiihdyta(50)
-print(f"Nopeus: {auto1.nopeus} km/h")
+#Kiihdytetään 60km/h nopeuteen
+auto1.kiihdyta(60)
 
-#Hätäjarru!
-auto1.kiihdyta(-200)
-print(f"Nopeus: {auto1.nopeus} km/h")
+#Kuljetaan 1,5h
+auto1.kulje(1.5)
+print(f"Kuljettu matka: {auto1.kuljettumatka} km")
