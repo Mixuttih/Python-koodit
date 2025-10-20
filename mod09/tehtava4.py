@@ -64,9 +64,9 @@ while voittaja == "":
 print(f"Voittaja-auto on: {voittaja}!")
 
 #"Selkeä taulukko"
-print('-' * 36)
-print('| {:<13} | {:<13} |'.format('Auto', 'Kuljettu matka'))
-print('-' * 36)
+print('-' * 54)
+print('| {:<13} | {:>15} | {:>16} |'.format('Auto', 'Huippunopeus', "Kuljettu matka"))
+print('-' * 54)
 for each in autolista:
-    print('| {:<13} | {:>13} km |'.format(each.rekisteritunnus, each.kuljettumatka))
-print('-' * 36)
+    print('| {:<13} | {:>10} km/h | {:>13} km |'.format(each.rekisteritunnus, each.huippunopeus, each.kuljettumatka))
+print('-' * 54)
