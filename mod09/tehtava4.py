@@ -33,28 +33,35 @@ class Auto:
     def kulje(self, tuntimaara):
         self.kuljettumatka += self.nopeus * tuntimaara
 
+#Luodaan listamuuttuja
 autolista = list()
 
+#Parametrit autolistan generointiin
 automaara = 10
 autonumero = 1
 
+#Loop joka lisää autoja listaan
 while autonumero <= automaara:
     autolista.append(Auto(f"ABC-{autonumero}", random.randint(100,200)))
     autonumero += 1
 
+#Muuttuja joka lopettaa kisan
 voittaja = ""
 
+#Loop joka pyörii kunnes voittaja löytyy
 while voittaja == "":
+    #Käydään läpi jokainen auto
     for each in autolista:
-        if each.kuljettumatka < 10000:
-            each.kiihdyta(random.randint(-10,15))
-            each.kulje(1)
-            if each.kuljettumatka > 10000:
-                voittaja = each.rekisteritunnus
-                break
-        else:
+        #Kiihdytetään autoa
+        each.kiihdyta(random.randint(-10,15))
+        #Kuljetaan tunti
+        each.kulje(1)
+        #Tarkistetaan onko auto ylittänyt maaliviivan
+        if each.kuljettumatka > 10000:
+            #Asetetaan voittaja
             voittaja = each.rekisteritunnus
-            break
+
+print(f"Voittaja on auto: {voittaja}!")
 
 for each in autolista:
     print(f"Auto: {each.rekisteritunnus} - Huippunopeus: {each.huippunopeus} - Kuljettu matka: {each.kuljettumatka}")
