@@ -49,9 +49,12 @@ while voittaja == "":
         if each.kuljettumatka < 10000:
             each.kiihdyta(random.randint(-10,15))
             each.kulje(1)
+            if each.kuljettumatka > 10000:
+                voittaja = each.rekisteritunnus
+                break
         else:
             voittaja = each.rekisteritunnus
             break
 
 for each in autolista:
-    print(f"Auto: {each.rekisteritunnus}, Kuljettu matka: {each.kuljettumatka}")
+    print(f"Auto: {each.rekisteritunnus} - Huippunopeus: {each.huippunopeus} - Kuljettu matka: {each.kuljettumatka}")
