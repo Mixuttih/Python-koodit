@@ -6,7 +6,7 @@ class Hissi():
 
     def siirry_kerrokseen(self, siirtyma):
         #Tarkastetaan mennäänkö ylös
-        if siirtyma > self.kerros:
+        if siirtyma > self.kerros and siirtyma <= self.ylin_kerros:
             #Looppi kunnes kerros on saavutettu
             while siirtyma > self.kerros:
                 #Mennään kerros ylös
@@ -16,7 +16,7 @@ class Hissi():
             print(f"Kerros {self.kerros} saavutettu")
 
         #Tarkastetaan mennäänkö alas
-        elif siirtyma < self.kerros:
+        elif siirtyma < self.kerros and siirtyma >= self.alin_kerros:
             #Looppi kunnes kerros saavutettu
             while siirtyma < self.kerros:
                 #Mennään kerros alas
@@ -45,3 +45,6 @@ hissi.siirry_kerrokseen(10)
 
 #Lasketaan hissi alas
 hissi.siirry_kerrokseen(1)
+
+#Koitetaan mennä olemattomaan kerrokseen, niin pysytään samassa kerroksessa
+hissi.siirry_kerrokseen(11)
