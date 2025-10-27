@@ -34,15 +34,15 @@ class Kilpailu:
 
     def tulosta_tilanne(self):
         # "Selkeä taulukko"
-        print('-' * 54)
-        print('| {:^50} |'.format(kilpailu.nimi))
-        print('-' * 54)
-        print('| {:<13} | {:>15} | {:>16} | '.format('Auto', 'Huippunopeus', "Kuljettu matka"))
-        print('-' * 54)
+        print('-' * 100)
+        print('| {:^96} |'.format(kilpailu.nimi))
+        print('-' * 100)
+        print('| {:<30} | {:>30} | {:>30} | '.format('Auto', 'Huippunopeus', "Kuljettu matka"))
+        print('-' * 100)
         for each in self.autolista:
-            print('| {:<13} | {:>10} km/h | {:>13} km |'.format(each.rekisteritunnus, each.huippunopeus,
+            print('| {:<30} | {:>25} km/h | {:>27} km |'.format(f"{each.rekisteritunnus} ({type(each).__name__})", each.huippunopeus,
                                                                 each.kuljettumatka))
-        print('-' * 54)
+        print('-' * 100)
 
 #Autoluokka
 class Auto:
