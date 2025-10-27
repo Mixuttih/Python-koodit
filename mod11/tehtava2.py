@@ -24,6 +24,7 @@ class Kilpailu:
             return True
         else:
             pass
+
         #Käydään läpi jokainen auto
         for each in self.autolista:
             #Jos joku auto on päässyt maaliin, lopetetaan kisa
@@ -133,5 +134,3 @@ if kilpailu.kilpailu_ohi(kuluneet_tunnit) == True:
     for each in kilpailu.autolista:
         if each.kuljettumatka > kilpailu.pituus:
             print(f"Voittaja on {each.rekisteritunnus}!")
-
-
