@@ -2,7 +2,7 @@ import requests
 
 #Loopin muuttuja
 saakone = True
-api = "8aaee5bfe760d365fe7df353fce3e964"
+api = "KÄYTÄ OMAASI"
 
 #Loputon loop
 while saakone == True:
