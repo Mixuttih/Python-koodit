@@ -29,4 +29,4 @@ noppaHeitot2.forEach(tarkistusfunktio)
 
 console.log((esiintymiset/noppaHeitot2.length)*100+"%");
 mahdollisuudet = (esiintymiset/noppaHeitot2.length)*100
-document.querySelector("#mahdollisuuspaikka").innerHTML = `<h2>${mahdollisuudet.toFixed(2)}%</h2>`;
+document.querySelector("#mahdollisuuspaikka").innerHTML = `<h2>Summan ${summaToive} esiintymisen mahdollisuus heitettäessä ${montaNoppaa} noppaa on ${mahdollisuudet.toFixed(2)}%</h2>`;
