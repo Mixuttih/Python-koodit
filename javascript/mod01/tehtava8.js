@@ -13,7 +13,7 @@ function tarkistaVuosi(i) {
 
 karkausvuodet = []
 
-while (vuosiluku1 < vuosiluku2) {
+while (vuosiluku1 <= vuosiluku2) {
     let onkoKarkausvuosi = tarkistaVuosi(vuosiluku1);
         if (onkoKarkausvuosi == true) {
             karkausvuodet.push(vuosiluku1);
