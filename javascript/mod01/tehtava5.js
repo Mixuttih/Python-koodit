@@ -1,7 +1,7 @@
 function tarkistaVuosi(i) {
     if (i % 4 == 0) {
         if (i % 100 == 0) {
-            return i % 400 == 0;
+            return true;
         }
         return true;
     }
