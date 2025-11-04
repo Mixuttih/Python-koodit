@@ -14,4 +14,4 @@ while (uusiNumeroArray.includes(parseInt(taasUusiNumero)) === false) {
     taasUusiNumero = window.prompt("Syötä numero:")
 }
 
-console.log(uusiNumeroArray)
+console.log(uusiNumeroArray.sort())
