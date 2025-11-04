@@ -4,7 +4,7 @@ let taasUusiNumero = window.prompt("Syötä numero:")
 while (uusiNumeroArray.includes(parseInt(taasUusiNumero)) === false) {
 
     //Jos käyttäjä syöttää jotain muuta kuin numeron
-   while (isNaN(parseInt(taasUusiNumero)) && uusiNumeroArray.includes(parseInt(taasUusiNumero)) === false) {
+   while (isNaN(parseInt(taasUusiNumero)) === true && uusiNumeroArray.includes(parseInt(taasUusiNumero)) === false) {
        taasUusiNumero = window.prompt("Syötä oikea numero:")
    }
 
