@@ -1,6 +1,6 @@
 let numeroArray = []
 while (numeroArray[0] !== 0) {
-    let uusiNumero = window.prompt("Syötä numero:")
+    let uusiNumero = window.prompt("TEHTÄVÄ 4: Syötä numero:")
 
         //Jos käyttäjä syöttää jotain muuta kuin numeron
        while (isNaN(parseInt(uusiNumero))) {

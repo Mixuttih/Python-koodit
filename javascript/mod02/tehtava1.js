@@ -2,7 +2,7 @@ regularArray = []
 reversedArray = []
 
 for (let i = 0; i < 5; i++) {
-    let arrayData = window.prompt("Syötä numero:")
+    let arrayData = window.prompt("TEHTÄVÄ 1: Syötä numero:")
     regularArray.push(arrayData)
 }
 

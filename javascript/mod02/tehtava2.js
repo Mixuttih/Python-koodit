@@ -1,4 +1,4 @@
-let osallistujaMaara = parseInt(window.prompt("Kuinka monta osallistujaa?"))
+let osallistujaMaara = parseInt(window.prompt("TEHTÄVÄ 2: Kuinka monta osallistujaa?"))
 let osallistujaLista = []
 
 for (let i = 1; i <= osallistujaMaara; i++) {

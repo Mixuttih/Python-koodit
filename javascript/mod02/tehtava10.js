@@ -1,4 +1,4 @@
-let candidates = parseInt(window.prompt("How many candidates?"))
+let candidates = parseInt(window.prompt("TEHTÄVÄ 10: How many candidates?"))
 let candidateList = []
 
 for (let i = 1; i <= candidates; i++) {

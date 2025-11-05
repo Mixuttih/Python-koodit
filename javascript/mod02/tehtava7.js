@@ -5,7 +5,7 @@ function noppafunktio2(max) {
 }
 
 let noppaheitot2 = []
-let nopansivut = parseInt(window.prompt("Kuinka monta lukua nopassa on?"))
+let nopansivut = parseInt(window.prompt("TEHTÄVÄ 7: Kuinka monta lukua nopassa on?"))
 
 while (noppaheitot2[0] !== nopansivut) {
     let noppa2 = noppafunktio2(nopansivut);

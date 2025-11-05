@@ -1,5 +1,5 @@
 let uusiNumeroArray = []
-let taasUusiNumero = window.prompt("Syötä numero:")
+let taasUusiNumero = window.prompt("TEHTÄVÄ 5: Syötä numero:")
 
 while (uusiNumeroArray.includes(parseInt(taasUusiNumero)) === false) {
 
