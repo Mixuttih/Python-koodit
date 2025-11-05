@@ -16,5 +16,5 @@ while (uusiNumeroArray.includes(parseInt(taasUusiNumero)) === false) {
     uusiNumeroArray.unshift(parseInt(taasUusiNumero))
     taasUusiNumero = window.prompt("Syötä numero:")
 }
-
-console.log(uusiNumeroArray.sort())
+uusiNumeroArray.sort(function(a, b) {return a - b;})
+console.log(uusiNumeroArray)
