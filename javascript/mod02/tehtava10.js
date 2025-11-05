@@ -20,7 +20,7 @@ for (let i = 1; i <= voters; i++) {
     candidateList.forEach(voteFunction)
 }
 
-candidateList.sort((a, b) => {console.log(a.votes, b.votes); return b.votes - a.votes;})
+candidateList.sort((a, b) => {return b.votes - a.votes;})
 console.log("The winner is "+candidateList[0].name+" with "+candidateList[0].votes+" votes!")
 console.log("Results:")
 
