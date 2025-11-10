@@ -95,7 +95,7 @@ const picArray = [
 // add your code here
 picArray.forEach(article => {
     let newArticle = document.createElement("article");
-    newArticle.class = "card";
+    newArticle.className = "card";
 
     let newTitle = document.createElement("h2");
     newTitle.innerText= article["title"];
