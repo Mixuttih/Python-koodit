@@ -26,11 +26,11 @@ def kentta(koodi):
         }
         jsonvast = json.dumps(vastaus)
 
-    except ValueError:
+    except IndexError:
         tilakoodi = 400
         vastaus = {
             "status": tilakoodi,
-            "teksti": "Virheellinen yhteenlaskettava"
+            "teksti": "Virheellinen haku"
         }
         jsonvast = json.dumps(vastaus)
 
