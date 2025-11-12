@@ -2,21 +2,19 @@ from flask import Flask, Response
 import json
 
 app = Flask(__name__)
-@app.route('/alkuluku/<luku1>')
-def primecheck(luku1):
+@app.route('/summa/<luku1>/<luku2>')
+def summa(luku1, luku2):
     try:
-        luku1 = int(luku1)
-        isprime = True
-
-        for i in range(2, luku1):
-            if luku1 % i == 0:
-                isprime = False
-                break
+        luku1 = float(luku1)
+        luku2 = float(luku2)
+        summa = luku1+luku2
 
         tilakoodi = 200
         vastaus = {
-            "Number": luku1,
-            "isPrime": isprime
+            "status": tilakoodi,
+            "luku1": luku1,
+            "luku2": luku2,
+            "summa": summa
         }
 
     except ValueError:
