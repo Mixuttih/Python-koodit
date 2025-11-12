@@ -18,7 +18,13 @@ def kentta(koodi):
         koodi = koodi
         cur.execute(f'''SELECT ident, name, municipality FROM airport WHERE ident = "{koodi}"''')
         tilakoodi = 200
-        jsonvast = json.dumps(cur.fetchall())
+        tulos = cur.fetchall()
+        vastaus = {
+            "ICAO": tulos[0][0],
+            "Name": tulos[0][1],
+            "Municipality": tulos[0][2]
+        }
+        jsonvast = json.dumps(vastaus)
 
     except ValueError:
         tilakoodi = 400
