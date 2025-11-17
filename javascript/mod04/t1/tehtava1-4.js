@@ -31,9 +31,13 @@ tvmazeForm.addEventListener('submit', async function(evt) {
             //Rivinvaihto linkin jälkeen
             newA.insertAdjacentHTML("beforeend", "<br>")
 
+            function getImg(isImg) {
+                return isImg ? i.show.image.medium : "https://placehold.co/210x295?text=Not%20Found";
+            }
+
             //Luodaan kuva-alue ja attribuutit
             let newImg = document.createElement('img');
-            newImg.setAttribute('src', i.show.image?.medium);
+            newImg.setAttribute('src', getImg(i.show.image?.medium));
 
             //Luodaan kuvausalue ja kuvaus muuttujaan
             let newDesc = document.createElement('div');
